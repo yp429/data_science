@@ -1,0 +1,45 @@
+---
+title: "lab3"
+author: "Yunxuan Pei"
+date: "2/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Get to know our data
+
+## Set up a GitHub-linked RStudio project to work in
+
+## Load the data
+
+```{r}
+install.packages("dslabs")
+library(dslabs)
+library(tidyverse)
+
+dim(gapminder)
+
+gap2011 <- gapminder %>%
+  as_tibble() %>%
+  filter(year==2011)
+```
+
+
+## Explore patterns in the data in breakout rooms
+
+### life expectancy
+
+```{r}
+ggplot(data = gap2011) +
+  geom_point(mapping = aes(x = gdp, y = life_expectancy)) 
+```
+
+
+
+
+
+
+
